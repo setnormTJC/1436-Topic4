@@ -17,7 +17,21 @@ void sleep(unsigned int secondsToSleepFor)
 
 int main()
 {
-	bool lightIsGreen = false;
+	bool lightIsGreen = false; //this means light is either yellow or red
+
+	if (lightIsGreen)
+	{
+		std::cout << "Go\n";
+	}
+
+	else
+	{					
+		std::cout << "Do not go\n";
+	}
+
+	Sleep(2'000); //make sure your input is > 0! (wait for light to turn) 
+
+	lightIsGreen = !lightIsGreen; //t*****
 
 	if (lightIsGreen)
 	{
@@ -28,21 +42,5 @@ int main()
 	{
 		std::cout << "Do not go\n";
 	}
-
-	Sleep(2'000); //make sure your input is > 0!
-
-	lightIsGreen = !lightIsGreen;
-
-	if (lightIsGreen)
-	{
-		std::cout << "Go\n";
-	}
-
-	else
-	{
-		std::cout << "Do not go\n";
-	}
-
-
 }
 
